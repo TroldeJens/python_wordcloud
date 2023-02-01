@@ -1,5 +1,5 @@
 # Resulting wordcloud image
-*.png
+resulting_wordcloud.png
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
