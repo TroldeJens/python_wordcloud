@@ -30,11 +30,11 @@ import numpy as np
 from PIL import Image
 
 def capitalize_first_letter(word: str) -> str:
-    """ Capitalize only first letter of a string. Other letters remain unchanged."""
+    """Capitalize only first letter of a string. Other letters remain unchanged."""
     return word[0].upper() + word[1:]
 
 def capitalize_first_letter_of_every_word(text: str) -> str:
-    """ Split a string into separate words and capitalize each of them. Other letters remain unchanged."""
+    """Split a string into separate words and capitalize each of them. Other letters remain unchanged."""
     words = []
     for word in text.split():
         words.append(capitalize_first_letter(word))
@@ -58,7 +58,7 @@ def cleanup_and_adjust_mask_image(mask: Image.Image) -> Image.Image:
     return tmpMask.convert("RGB")                   # Return a 24bit version of the tmpMask image.
 
 def generate_wordcloud():
-    """ Generate wordcloud using the global variables defined in the beginning of the document."""
+    """Generate wordcloud using the global variables defined in the beginning of the document."""
 
     # Get data directory (using getcwd() is needed to support running example in generated IPython notebook).
     d = path.dirname(__file__) if "__file__" in locals() else os.getcwd()
@@ -78,7 +78,7 @@ def generate_wordcloud():
         lines = [capitalize_first_letter_of_every_word(line) for line in lines]
 
     # Count each unique line
-    word_count_dictionary=Counter(lines)
+    word_count_dictionary = Counter(lines)
 
     # Debug
     if(debug):

@@ -1,4 +1,6 @@
 {
+    // Set line endings to LF for new files.
+    "files.eol": "\n",
     "python.testing.unittestArgs": [
         "-v",
         "-s",
